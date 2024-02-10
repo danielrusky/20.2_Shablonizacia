@@ -20,7 +20,8 @@ def contact(request):
         Contacts.objects.create(name=name, phone=phone, message=message)
         print(f'У вас новое сообщение от: {name}(телефон:{phone}): {message}')
     context = {
-        'title': 'Контакты'
+        'title': 'Контакты',
+        'contacts': Contacts.objects.get(name='Данила')
     }
     return render(request, 'catalog/contacts.html', context)
 

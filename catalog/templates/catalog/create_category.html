@@ -9,12 +9,16 @@
             <form method="post" action="" class="form-floating">
                 {% csrf_token %}
                 <div class="mb-3">
-                    <label for="cat_name">Название категории</label>
-                    <input type="text" name="cat_name" class="form-control" id="cat_name" required>
+                    <label for="category_name">Название категории</label>
+                    <input type="text" name="cat_name" class="form-control" id="category_name" required>
                 </div>
                 <div class="mb-3">
-                    <label for="cat_desc">Описание категории</label>
-                    <textarea class="form-control" aria-label="With textarea" id="cat_desc" required></textarea>
+                    <label for="category_description">Описание категории</label>
+                    <textarea class="form-control" aria-label="With textarea" id="category_description" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="image">Изображение</label>
+                    <textarea class="form-control" aria-label="With textarea" id="image" required></textarea>
                 </div>
                 <input class="btn btn-primary w-100" type="submit" value="Отправить"/>
             </form>
